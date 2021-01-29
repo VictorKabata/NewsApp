@@ -4,19 +4,35 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.vickikbt.newsapp.R
+import com.vickikbt.newsapp.databinding.FragmentSubscriptionBinding
 
 
 class SubscriptionFragment : Fragment() {
+
+    private lateinit var binding: FragmentSubscriptionBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val root = inflater.inflate(R.layout.fragment_subscription, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_subscription, container, false)
 
-        return root
+        binding.toolbar.setNavigationOnClickListener {
+            findNavController().navigateUp()
+        }
+
+        initUI()
+
+        return binding.root
+    }
+
+    private fun initUI() {
+
     }
 
 }
