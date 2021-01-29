@@ -1,3 +1,28 @@
 <resources>
     <string name="app_name">News App</string>
+
+    <string name="intro">The number one freshest premium news app.</string>
+
+    <string name="browse">Browse</string>
+    <string name="upgrade">Upgrade</string>
+
+    <string name="latest_feed">Latest Feed</string>
+
+    <string name="news_title1">A look into collaborative wire framing process</string>
+    <string name="news_title2">20 Tools that will help you become a better freelancer</string>
+    <string name="news_title3">Collaboration work flows for remote design teams</string>
+    <string name="news_title4">These are the songs designers listen to when they want to get in the zone</string>
+
+    <string name="news_content">Wireframing is a critical step in design—for you, for developers, for copywriters, and for anyone else who needs to understand your design. With all those people needing access, wouldn’t you want to work collaboratively from the get-go? Why bother making a wireframe collaboratively? Well, for starters, collaborating lets you get feedback from your peers and stakeholders early on in the design process, keeping you from endless feedback cycles and helping you launch better designs faster. Whether you’re sitting right next to someone or they’re halfway across the world, working sessions help foster creativity. Ideas are the gift that keeps on giving—one leads to another leads to another and, before you know it, you and your team are throwing creative calls back-and-forth like old pros.</string>
+
+    <string name="select_your_plan">Select Your Plan</string>
+
+    <string name="plan_description">Read the freshest entertainment news site, for all your fashion news, music news, videos, celebrity news and Lifestyle News for 1 week</string>
+
+    <string name="intermediate">Intermediate</string>
+
+    <string name="rate1">$2.99 / week</string>
+    <string name="rate2">$5.99 / week</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="expert">Expert</string>
 </resources>
