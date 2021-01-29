@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentSubscriptionBinding
+import com.vickikbt.newsapp.ui.adapters.BillingBottomFragment
 
 
 class SubscriptionFragment : Fragment() {
@@ -22,6 +23,7 @@ class SubscriptionFragment : Fragment() {
         binding =
             DataBindingUtil.inflate(inflater, R.layout.fragment_subscription, container, false)
 
+
         binding.toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
         }
@@ -32,7 +34,15 @@ class SubscriptionFragment : Fragment() {
     }
 
     private fun initUI() {
+        val billingBottomFragment = BillingBottomFragment()
 
+        binding.buttonSubscribeRate1.setOnClickListener {
+            billingBottomFragment.show(childFragmentManager, "VickiKbt")
+        }
+
+        binding.buttonSubscribeRate2.setOnClickListener {
+            billingBottomFragment.show(childFragmentManager, "VickiKbt")
+        }
     }
 
 }
