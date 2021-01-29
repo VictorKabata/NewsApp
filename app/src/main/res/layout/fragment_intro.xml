@@ -8,11 +8,20 @@
         android:layout_height="match_parent"
         tools:context=".ui.fragments.IntroFragment">
 
-        <ImageView
+        <com.bosphere.fadingedgelayout.FadingEdgeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            android:src="@drawable/intro_image" />
+            android:background="@color/black"
+            app:fel_edge="bottom"
+            app:fel_size_bottom="400dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/intro_image" />
+
+        </com.bosphere.fadingedgelayout.FadingEdgeLayout>
 
         <TextView
             android:layout_width="0dp"
