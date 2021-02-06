@@ -89,7 +89,6 @@
                 android:ellipsize="end"
                 android:fontFamily="@font/roboto_regular"
                 android:lineSpacingExtra="5dp"
-                android:maxLines="5"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
