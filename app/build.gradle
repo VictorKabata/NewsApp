@@ -66,8 +66,11 @@ dependencies {
 
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutine_version"
 
-    implementation "com.anjlab.android.iab.v3:library:$billing_version"
+    //implementation "com.anjlab.android.iab.v3:library:$billing_version"
     //implementation "com.google.android.gms:play-services-ads:$google_play_version"
+
+    //v2
+    implementation 'com.github.kosev:android-inapp-billing:1.1.2'
 
     implementation "de.hdodenhof:circleimageview:$hdodenhof_version"
 
