@@ -19,7 +19,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="centerCrop"
-                android:src="@drawable/real_home" />
+                android:src="@drawable/tusco" />
 
         </com.bosphere.fadingedgelayout.FadingEdgeLayout>
 
@@ -30,7 +30,7 @@
             android:layout_marginEnd="16dp"
             android:layout_marginBottom="24dp"
             android:fontFamily="@font/roboto_medium"
-            android:text="Real Estate Articles World Pro"
+            android:text="Tusco News For professionals"
             android:textColor="@color/white"
             android:textSize="40sp"
             android:textStyle="bold"
