@@ -37,11 +37,11 @@ class SubscriptionFragment : Fragment() {
         val billingBottomFragment = BillingBottomFragment()
 
         binding.buttonSubscribeRate1.setOnClickListener {
-            billingBottomFragment.show(childFragmentManager, "VickiKbt")
+            billingBottomFragment.show(childFragmentManager, "intermediate")
         }
 
         binding.buttonSubscribeRate2.setOnClickListener {
-            billingBottomFragment.show(childFragmentManager, "VickiKbt")
+            billingBottomFragment.show(childFragmentManager, "expert")
         }
     }
 

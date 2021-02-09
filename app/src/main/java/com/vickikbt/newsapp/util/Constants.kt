@@ -1,0 +1,7 @@
+package com.vickikbt.newsapp.util
+
+object Constants {
+
+    const val LICENSE_KEY="MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA0q34FF2ljLcGY1TB4piwZtRBxi+YOAhy6UjqVgLgKOkpE+mumpZ4Cu1bfopn3X5cCCLZUyyU2p1X6hwo9rnmaU/OeT6/x7ZeeL+0X1CfI1t6PsAEGt4Q1LGHhhUMOTRxErPj1YCBfxrfnAN1/iKov9wwQXtopneetuimjqal8bHsOeiJiufwkm4Dpm0aq9RmT9iWhQUzFL2SgA5IVV8q/Uu3EnDaoEVaZD3Uy26pJwDOHecOdtQ8w6JmH1Yw0+im+dzYMu3w6/ONWaD/IREKA+AhpLXylIop6ut/gpJOHksXOPucoWRJL4V7u2ozCQBOxPo+tvK5hK5X0Jry6KHpUwIDAQAB"
+
+}
