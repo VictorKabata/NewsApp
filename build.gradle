@@ -26,6 +26,8 @@ buildscript {
         leak_canary_version = "2.6"
         hdodenhof_version = "3.1.0"
         fadingEdge_version = "1.0.0"
+        billing_version="1.0.44"
+        //google_play_version="18.3.0"
     }
 
 
