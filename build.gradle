@@ -3,15 +3,15 @@ buildscript {
 
     ext {
         //Kotlin
-        kotlin_version = "1.4.10"
+        kotlin_version = "1.4.30"
 
         //Versioning
         compileSdkVersion = 30
         buildToolsVersion = "30.0.2"
         minSdkVersion = 21
         targetSdkVersion = 30
-        versionCode = 1
-        versionName = "1.0"
+        versionCode = 3
+        versionName = "3.0"
 
         androidCore_version = "1.3.2"
         appCompat_version = "1.2.0"
@@ -36,7 +36,7 @@ buildscript {
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "com.android.tools.build:gradle:4.1.2"
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$nav_version"
