@@ -49,17 +49,18 @@ class SubscriptionFragment : Fragment() {
     private fun initUI() {
         val billingBottomFragment = BillingBottomFragment()
 
-
         mBilling = Billing(requireContext(), Constants.LICENSE_KEY)
-        mBilling!!.create(object : CreateListener {
+
+        mBilling?.create(object : CreateListener {
             override fun onSuccess() {
                 val skus: ArrayList<String> = ArrayList()
                 skus.add("intermediate")
                 skus.add("expert")
-                mBilling!!.loadInventory(skus, object : InventoryListener {
+                mBilling?.loadInventory(skus, object : InventoryListener {
                     override fun onSuccess(inventory: Inventory) {
                         // inventory.hasPurchase("Your SKU");
-                        Snackbar.make(requireView(), "Loaded purchase products!", Snackbar.LENGTH_SHORT).show()
+                        // Snackbar.make(requireView(), "Loaded purchase products!", Snackbar.LENGTH_SHORT).show()
+                        requireActivity().toast("Loaded purchase products!")
                     }
 
                     override fun onError(response: Int, e: Exception) {
