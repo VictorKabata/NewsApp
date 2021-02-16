@@ -13,6 +13,7 @@ import com.anjlab.android.iab.v3.TransactionDetails
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentSubscriptionBinding
 import com.vickikbt.newsapp.ui.adapters.BillingBottomFragment
+import com.vickikbt.newsapp.util.Constants
 import com.vickikbt.newsapp.util.toast
 
 
@@ -34,7 +35,7 @@ class SubscriptionFragment : Fragment(), BillingProcessor.IBillingHandler {
             findNavController().navigateUp()
         }
 
-        bp = BillingProcessor(requireContext(), "YOUR LICENSE KEY FROM GOOGLE PLAY CONSOLE HERE", this)
+        bp = BillingProcessor(requireContext(), Constants.LICENSE_KEY, this)
         bp?.initialize()
 
         initUI()
