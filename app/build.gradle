@@ -75,4 +75,8 @@ dependencies {
     implementation "de.hdodenhof:circleimageview:$hdodenhof_version"
 
     implementation "com.github.bosphere.android-fadingedgelayout:fadingedgelayout:$fadingEdge_version"
+
+    def billing_version = "2.0.1"
+
+    implementation "com.android.billingclient:billing:$billing_version"
 }

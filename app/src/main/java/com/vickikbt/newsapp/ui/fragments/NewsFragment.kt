@@ -1,20 +1,27 @@
 package com.vickikbt.newsapp.ui.fragments
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.android.billingclient.api.*
 import com.bumptech.glide.Glide
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentNewsBinding
 import com.vickikbt.newsapp.ui.viewmodels.NewsDetailViewModel
 import com.vickikbt.newsapp.util.UserSession
+import com.vickikbt.newsapp.util.toast
 import dagger.hilt.android.AndroidEntryPoint
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 
 @AndroidEntryPoint
 class NewsFragment : Fragment() {
@@ -24,6 +31,7 @@ class NewsFragment : Fragment() {
     private val args: NewsFragmentArgs by navArgs()
 
     private lateinit var userSession: UserSession
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
