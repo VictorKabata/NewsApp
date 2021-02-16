@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentSubscriptionBinding
 import com.vickikbt.newsapp.ui.adapters.BillingBottomFragment
@@ -58,6 +59,7 @@ class SubscriptionFragment : Fragment() {
                 mBilling!!.loadInventory(skus, object : InventoryListener {
                     override fun onSuccess(inventory: Inventory) {
                         // inventory.hasPurchase("Your SKU");
+                        Snackbar.make(requireView(), "purchases are now ready!", Snackbar.LENGTH_SHORT).show()
                     }
 
                     override fun onError(response: Int, e: Exception) {
@@ -84,6 +86,7 @@ class SubscriptionFragment : Fragment() {
                     override fun onSuccess(purchase: Purchase) {
                         if ("intermediate" == purchase.sku) {
                             // complete order
+                            requireActivity().toast("intermediate purchased successfully!")
                         }
                     }
 
@@ -104,6 +107,7 @@ class SubscriptionFragment : Fragment() {
                     override fun onSuccess(purchase: Purchase) {
                         if ("expert" == purchase.sku) {
                             // complete order
+                            requireActivity().toast("expert purchased successfully!")
                         }
                     }
 
