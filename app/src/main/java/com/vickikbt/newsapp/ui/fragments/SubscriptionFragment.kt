@@ -31,7 +31,7 @@ class SubscriptionFragment : Fragment(), PurchasesUpdatedListener,
 
     private val REQUEST_PURCHASE = 1001
     private lateinit var binding: FragmentSubscriptionBinding
-    private var mBilling: Billing? = null
+    //private var mBilling: Billing? = null
     private var mSkuDetailsList: MutableList<SkuDetails?> = mutableListOf()
 
     private val purchasesUpdatedListener =
@@ -112,7 +112,8 @@ class SubscriptionFragment : Fragment(), PurchasesUpdatedListener,
         val billingBottomFragment = BillingBottomFragment()
 
 
-        mBilling = Billing(requireContext(), Constants.LICENSE_KEY)
+       /* mBilling = Billing(requireContext(), Constants.LICENSE_KEY)
+
         mBilling!!.create(object : CreateListener {
             override fun onSuccess() {
                 val skus: ArrayList<String> = ArrayList()
@@ -138,7 +139,7 @@ class SubscriptionFragment : Fragment(), PurchasesUpdatedListener,
             override fun onError(response: Int, e: Exception) {
                 // billing is not supported
             }
-        })
+        })*/
 
 
         binding.buttonSubscribeRate1.setOnClickListener {
@@ -265,11 +266,11 @@ class SubscriptionFragment : Fragment(), PurchasesUpdatedListener,
         }
     }
 
-    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+    /*override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (mBilling != null) {
             mBilling!!.onActivityResult(requestCode, resultCode, data);
         }
-    }
+    }*/
 
 }
