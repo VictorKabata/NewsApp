@@ -9,7 +9,6 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
-import com.bumptech.glide.Glide
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentNewsBinding
 import com.vickikbt.newsapp.ui.viewmodels.NewsDetailViewModel
@@ -34,16 +33,16 @@ class NewsFragment : Fragment() {
         binding.toolbar.setNavigationOnClickListener { findNavController().navigateUp() }
         userSession = UserSession(requireActivity())
 
-        binding.buttonUpgrade.setOnClickListener {
+        /*binding.buttonUpgrade.setOnClickListener {
             findNavController().navigate(R.id.news_to_subscription)
-        }
+        }*/
 
-        initUI()
+        //initUI()
 
         return binding.root
     }
 
-    private fun initUI() {
+    /*private fun initUI() {
         viewModel.getNews(args.NewsId).observe(viewLifecycleOwner, { news ->
             Glide.with(requireActivity()).load(news.imageUrl).into(binding.imageViewNews)
             binding.textViewNewsTitle.text = news.title
@@ -60,5 +59,5 @@ class NewsFragment : Fragment() {
                 binding.textViewNewsContent.maxLines = 5
             }
         })
-    }
+    }*/
 }

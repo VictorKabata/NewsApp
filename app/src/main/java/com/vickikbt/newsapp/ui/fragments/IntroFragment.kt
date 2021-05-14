@@ -8,26 +8,25 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentIntroBinding
-import com.vickikbt.newsapp.util.log
 
 
 class IntroFragment : Fragment() {
 
     private lateinit var binding: FragmentIntroBinding
-    private lateinit var window:Window
+    private lateinit var window: Window
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = DataBindingUtil.inflate(inflater, R.layout.fragment_intro, container, false)
-        window=requireActivity().window
+        window = requireActivity().window
 
-        binding.buttonBrowse.setOnClickListener {
+        /*binding.buttonBrowse.setOnClickListener {
             findNavController().navigate(R.id.intro_to_home)
-        }
+        }*/
 
-        binding.buttonUpgrade.setOnClickListener {
+        binding.buttonContinue.setOnClickListener {
             findNavController().navigate(R.id.intro_to_subscription)
         }
 

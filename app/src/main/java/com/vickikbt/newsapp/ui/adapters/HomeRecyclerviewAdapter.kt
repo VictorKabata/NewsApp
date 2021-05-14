@@ -10,25 +10,26 @@ import androidx.navigation.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.vickikbt.newsapp.R
+import com.vickikbt.newsapp.databinding.ItemMenuBinding
 import com.vickikbt.newsapp.databinding.ItemNewsBinding
 import com.vickikbt.newsapp.models.News
 import com.vickikbt.newsapp.ui.fragments.HomeFragmentDirections
 
-class NewsRecyclerviewAdapter constructor(private val news: MutableList<News>) :
-    RecyclerView.Adapter<NewsRecyclerviewHolder>() {
+class HomeRecyclerviewAdapter constructor(private val menu: MutableList<String>) :
+    RecyclerView.Adapter<HomeRecyclerviewHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsRecyclerviewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeRecyclerviewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
-        val binding: ItemNewsBinding =
-            DataBindingUtil.inflate(layoutInflater, R.layout.item_news, parent, false)
-        return NewsRecyclerviewHolder(binding)
+        val binding: ItemMenuBinding =
+            DataBindingUtil.inflate(layoutInflater, R.layout.item_menu, parent, false)
+        return HomeRecyclerviewHolder(binding)
     }
 
-    override fun getItemCount() = news.size
+    override fun getItemCount() = menu.size
 
-    override fun onBindViewHolder(holder: NewsRecyclerviewHolder, position: Int) {
-        val news = news[position]
-        holder.bind(holder.itemView.context, news)
+    override fun onBindViewHolder(holder: HomeRecyclerviewHolder, position: Int) {
+        val menuItem = menu[position]
+        holder.bind(menuItem)
 
         /*holder.itemView.setOnClickListener {
             val action=HomeFragmentDirections.homeToArticle(news.id)
@@ -37,16 +38,18 @@ class NewsRecyclerviewAdapter constructor(private val news: MutableList<News>) :
     }
 }
 
-class NewsRecyclerviewHolder(private val binding: ItemNewsBinding) :
+class HomeRecyclerviewHolder(private val binding: ItemMenuBinding) :
     RecyclerView.ViewHolder(binding.root) {
 
     @SuppressLint("SetTextI18n")
-    fun bind(context: Context, news: News) {
-        Glide.with(context).load(news.user.imageUrl).into(binding.imageViewUserProfile)
+    fun bind(menuItem:String) {
+        binding.textViewMenuItem.text=menuItem
+
+        /*Glide.with(context).load(news.user.imageUrl).into(binding.imageViewUserProfile)
         binding.textViewUsername.text = news.user.userName
         binding.textViewArticleDuration.text = "${news.length} min read"
         binding.textViewArticleTitle.text = news.title
-        Glide.with(context).load(news.imageUrl).into(binding.imageViewArticleImage)
+        Glide.with(context).load(news.imageUrl).into(binding.imageViewArticleImage)*/
     }
 
 }

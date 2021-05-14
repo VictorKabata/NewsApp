@@ -97,14 +97,14 @@
                 tools:text="@string/news_content" />
 
             <Button
-                android:id="@+id/button_upgrade"
+                android:id="@+id/button_continue"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:backgroundTint="@color/blue"
                 android:fontFamily="@font/roboto_medium"
                 android:paddingVertical="16dp"
-                android:text="@string/upgrade"
+                android:text="@string/intro_button_text"
                 android:textAllCaps="true"
                 android:textColor="@color/white"
                 android:textSize="18sp"

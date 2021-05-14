@@ -4,7 +4,7 @@
     <string name="intro">The number one freshest premium news app.</string>
 
     <string name="browse">Browse</string>
-    <string name="upgrade">Upgrade</string>
+    <string name="intro_button_text">Continue</string>
 
     <string name="latest_feed">Latest Feed</string>
 
@@ -25,4 +25,5 @@
     <string name="rate2">$5.99 / week</string>
     <string name="subscribe">Subscribe</string>
     <string name="expert">Expert</string>
+    <string name="intro_text">Overview of the three main type of calculations</string>
 </resources>

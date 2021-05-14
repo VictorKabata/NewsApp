@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
 import com.vickikbt.newsapp.R
 import com.vickikbt.newsapp.databinding.FragmentSubscriptionBinding
 import com.vickikbt.newsapp.ui.adapters.BillingBottomFragment
@@ -18,9 +17,6 @@ import net.kosev.billing.Billing
 import net.kosev.billing.Billing.*
 import net.kosev.billing.Inventory
 import net.kosev.billing.Purchase
-
-
-
 
 
 class SubscriptionFragment : Fragment() {
@@ -38,7 +34,7 @@ class SubscriptionFragment : Fragment() {
 
 
         binding.toolbar.setNavigationOnClickListener {
-            findNavController().navigateUp()
+            findNavController().navigate(R.id.subscriptions_to_home)
         }
 
         initUI()
@@ -99,7 +95,7 @@ class SubscriptionFragment : Fragment() {
                 })
         }
 
-        binding.buttonSubscribeRate2.setOnClickListener {
+        /*binding.buttonSubscribeRate2.setOnClickListener {
             //billingBottomFragment.show(childFragmentManager, "expert")
             mBilling!!.launchPurchaseFlow(requireActivity(),
                 "expert",
@@ -118,7 +114,7 @@ class SubscriptionFragment : Fragment() {
                         requireActivity().toast(e.localizedMessage)
                     }
                 })
-        }
+        }*/
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
