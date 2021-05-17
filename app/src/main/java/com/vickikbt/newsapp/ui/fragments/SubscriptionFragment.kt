@@ -33,9 +33,9 @@ class SubscriptionFragment : Fragment() {
             DataBindingUtil.inflate(inflater, R.layout.fragment_subscription, container, false)
 
 
-        binding.toolbar.setNavigationOnClickListener {
+        /*binding.toolbar.setNavigationOnClickListener {
             findNavController().navigate(R.id.subscriptions_to_home)
-        }
+        }*/
 
         initUI()
 
